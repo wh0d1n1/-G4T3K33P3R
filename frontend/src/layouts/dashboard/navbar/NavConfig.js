@@ -81,7 +81,7 @@ const navConfig = [
   // APP
   // ----------------------------------------------------------------------
   {
-    subheader: 'app',
+    subheader: 'CRM',
     items: [
       {
         title: 'mail',
