@@ -1,20 +1,16 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Box, Typography, Link } from '@mui/material';
-//
-import Breadcrumbs from './Breadcrumbs';
+import { Box,  } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
 HeaderBreadcrumbs.propTypes = {
   links: PropTypes.array,
-  action: PropTypes.node,
-  heading: PropTypes.string.isRequired,
   moreLink: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   sx: PropTypes.object,
 };
 
-export default function HeaderBreadcrumbs({ links, action, heading, moreLink = '' || [], sx, ...other }) {
+export default function HeaderBreadcrumbs({ links,  moreLink = '' || [], sx }) {
   return (
     <Box sx={{ mb: 5, ...sx }}>
       <Box sx={{ mt: 2 }}>
