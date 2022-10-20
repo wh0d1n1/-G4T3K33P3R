@@ -14,7 +14,7 @@ WORKDIR /backend
 
 RUN apk update && apk add postgresql-dev gcc musl-dev
 
-COPY backend/requirements.txt /requirements.txt
+COPY backend/requirements/production.txt /requirements/production.txt
 
 RUN pip install -r /requirements.txt
 
@@ -26,4 +26,4 @@ COPY --from=client-builder /build /frontend/build
 
 RUN DATABASE_URL='' python manage.py collectstatic --noinput
 
-CMD gunicorn wueww.wsgi --log-file -
+CMD gunicorn config.wsgi --log-file -
