@@ -14,9 +14,9 @@ WORKDIR /backend
 
 RUN apk update && apk add postgresql-dev gcc musl-dev
 
-COPY backend/requirements/production.txt /requirements/production.txt
+COPY backend/requirements/local.txt /requirements/local.txt
 
-RUN pip install -r /requirements.txt
+RUN pip install -r /requirements/local.txt
 
 COPY ./backend /backend
 
